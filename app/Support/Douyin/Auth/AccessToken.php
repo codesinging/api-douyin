@@ -15,7 +15,7 @@ class AccessToken
     protected string $clientKey = '';
     protected string $clientSecret = '';
     protected string $grantType = 'client_credential';
-    protected string $apiPrefix = 'https://open.douyin.com/';
+    protected string $api = 'https://open.douyin.com/oauth/client_token/';
 
     protected string $key = '';
 
@@ -35,7 +35,7 @@ class AccessToken
      */
     private function getData()
     {
-        $response = Http::post($this->apiPrefix . 'oauth/client_token/', [
+        $response = Http::post($this->api, [
             'client_key' => $this->clientKey,
             'client_secret' => $this->clientSecret,
             'grant_type' => $this->grantType,
