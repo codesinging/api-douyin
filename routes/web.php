@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('access_token/new_token', [Controllers\AccessTokenController::class, 'newToken']);
+Route::get('access_token/token', [Controllers\AccessTokenController::class, 'token']);

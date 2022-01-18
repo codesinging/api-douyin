@@ -6,6 +6,6 @@
 
 
 return [
-    'clientKey' => env('DOUYIN_SITE_CLIENT_KEY'),
-    'clientSecret' => env('DOUYIN_SITE_CLIENT_SECRET'),
+    'client_key' => env('DOUYIN_SITE_CLIENT_KEY'),
+    'client_secret' => env('DOUYIN_SITE_CLIENT_SECRET'),
 ];
