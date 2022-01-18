@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Http;
 class Connect
 {
     protected string $api = 'https://open.douyin.com/platform/oauth/connect/';
-    protected string $redirectUri = 'https://douyin.pinfankeji.com/connect/code';
+    protected string $redirectUri = 'https://douyin.jscss.com/connect/code';
     protected string $clientKey = '';
     protected array $scopes = [
         'user_info',
