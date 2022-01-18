@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Http;
 class Connect
 {
     protected string $api = 'https://open.douyin.com/platform/oauth/connect/';
+    protected string $redirectUri = 'https://douyin.pinfankeji.com/connect/code';
     protected string $clientKey = '';
     protected array $scopes = [
         'user_info',
@@ -30,7 +31,7 @@ class Connect
             'client_key' => $this->clientKey,
             'response_type' => 'code',
             'scope' => implode(',', $this->scopes),
-            'redirect_uri' => 'https://douyin.pinfankeji.com/douyin',
+            'redirect_uri' => $this->redirectUri,
         ]);
 
         return $this->api . '?' . $query;

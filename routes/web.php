@@ -22,3 +22,6 @@ Route::get('access_token/new_token', [Controllers\AccessTokenController::class, 
 Route::get('access_token/token', [Controllers\AccessTokenController::class, 'token']);
 
 Route::get('connect/url', [Controllers\ConnectController::class, 'getUrl']);
+Route::get('connect/code', [Controllers\ConnectController::class, 'code']);
+
+

@@ -13,4 +13,9 @@ class ConnectController extends Controller
         $url = (new Connect())->getUrl();
         return success(compact('url'));
     }
+
+    public function code(Request $request)
+    {
+        dump($request->all());
+    }
 }
